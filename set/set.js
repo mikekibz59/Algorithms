@@ -37,7 +37,6 @@ function MySet() {
   this.length = () => {
     return this.collection.length
   }
-
   this.union = (otherSet) => {
     let tempSet = new MySet()
     let firstSet = this.values()
