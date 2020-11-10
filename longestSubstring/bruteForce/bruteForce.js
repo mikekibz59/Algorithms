@@ -15,5 +15,5 @@ var lengthOfSubstring = function(s){
   }
   return count
 }
-let result = lengthOfSubstring('abcdabdghtyuo')
+let result = lengthOfSubstring('aaaaa')
 console.log(result)

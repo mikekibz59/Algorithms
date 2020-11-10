@@ -1,32 +1,24 @@
 let lengthOfSubstring = function(s){
-let i=0;
-let j=0;
+let a_pointer=0, b_pointer=0;
 let max = 0
-let sLength = s.length;
+
 let set = new Set()
-while(i<sLength ){
-  let char = s.charAt(i)
-  if(!set.has(char)){
-    set.add(char)
-  }else{
-    let tempChar = s.charAt(j)
+while(b_pointer < s.length){
+
+  let char = s.charAt(b_pointer)
+  if (set.has(char)){
+    let tempChar = s.charAt(a_pointer)
     set.delete(tempChar)
-    j++
-  }
-  set_size = set.size
-
-  if (set_size === 0 && (i-j)=== 0){
-    max = 1
+    a_pointer++
   }else{
-  max = Math.max(set_size, i-j)
+    set.add(char)
+    b_pointer++
+    max = Math.max(set.size, max)
   }
-  console.log(set, (i-j))
-  i++
 }
-return max
-
+  return max
 }
 
-let results = lengthOfSubstring("aaaaa")
-// let results = lengthOfSubstring('wwwk')
+let results = lengthOfSubstring("pwwkew")
+// let results = lengthOfSubstring('wwwkee')
 console.log(results)
