@@ -22,7 +22,6 @@
       } else {
         let added = false
         for(let i=0;i<this.size();i++){
-          debugger;
           if(value[1] < this.collection[i][1]){
             this.collection.splice(i,0,value)
             added=true;
@@ -46,5 +45,7 @@
  let pq = new PriorityQueue()
  pq.enqueue(['a',4])
  pq.enqueue(['b',2])
+ pq.enqueue(['g',1])
+ 
 
  pq.printCollection()
